@@ -2,6 +2,8 @@
 
 A comprehensive web resource for understanding and calculating Zakat, based on *Simple Zakat Guide: Understand and Calculate Your Zakat* by **Joe Bradford** (3rd Edition, 2022, Origem Publishing).
 
+**Live site:** https://zakat-calculator.sadikuolsi2001.workers.dev/
+
 ## Features
 
 - **Educational Guide** — Covers foundational principles, Islamic financial ethics, terminology, asset types (cash, gold, stocks, crypto, NFTs, real estate), haram earnings, expenses, and the eight Quranic categories of Zakat recipients.
