@@ -1,0 +1,64 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ZakatCalculator from "../components/ZakatCalculator.tsx";
+---
+
+<Layout
+  title="Zakat Calculator"
+  description="Calculate your Zakat obligation step by step. Covers cash, gold, silver, stocks, crypto, and more."
+>
+  <!-- Hero -->
+  <section class="bg-forest-800 relative overflow-hidden">
+    <div class="absolute inset-0 bg-geometric-dark"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-6 py-16 md:py-20">
+      <span class="font-ui text-gold-300 text-sm font-semibold tracking-wider uppercase mb-3 block">
+        Interactive Tool
+      </span>
+      <h1 class="text-parchment-100 text-display-md md:text-display-lg max-w-3xl">
+        Calculate Your Zakat
+      </h1>
+      <p class="text-parchment-300 font-body text-lg mt-4 max-w-2xl">
+        Work through each worksheet step by step. Your financial data never
+        leaves your device — the site owner and no one else can see the
+        numbers you enter.
+      </p>
+    </div>
+  </section>
+
+  <!-- Privacy notice -->
+  <div class="max-w-5xl mx-auto px-6 mt-8">
+    <div class="bg-forest-50 border border-forest-200/50 rounded-sm px-6 py-5 flex gap-4 items-start">
+      <div class="w-10 h-10 rounded-full bg-forest-100 flex items-center justify-center shrink-0 mt-0.5">
+        <svg class="w-5 h-5 text-forest-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+        </svg>
+      </div>
+      <div>
+        <h3 class="font-ui text-sm font-bold text-forest-800 mb-1">Your data stays on your device</h3>
+        <p class="font-ui text-sm text-forest-700 leading-relaxed">
+          Everything you enter is calculated entirely in your browser.
+          <strong>No data is ever sent to any server</strong> — the website owner
+          cannot see your numbers, and nothing is stored in any database.
+          Your entries are saved only in your browser's local cache so you
+          don't lose progress if you accidentally close the tab. You can
+          clear this cache at any time using the "Clear All" button.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Attribution -->
+  <div class="max-w-5xl mx-auto px-6 mt-4">
+    <div class="attribution-banner">
+      Calculator based on the worksheet system from <em>Simple Zakat Guide:
+      Understand and Calculate Your Zakat</em> by <strong>Joe Bradford</strong>
+      (3rd Edition, Origem Publishing, 2022). Always consult a qualified
+      scholar for specific rulings.
+    </div>
+  </div>
+
+  <!-- Calculator -->
+  <div class="max-w-5xl mx-auto px-6 py-12">
+    <ZakatCalculator client:load />
+  </div>
+</Layout>

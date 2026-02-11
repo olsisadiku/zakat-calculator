@@ -1,0 +1,286 @@
+---
+import GuideLayout from "../../layouts/GuideLayout.astro";
+---
+
+<GuideLayout
+  title="Earnings & Expenses"
+  subtitle="Identifying impermissible earnings, deductible expenses, and liabilities that affect your Zakat calculation."
+  chapter="Part Two — Chapters IV & V"
+>
+  <div class="space-y-12">
+    <!-- Chapter IV: Haram Earnings -->
+    <section>
+      <div class="relative">
+        <span class="section-number">IV</span>
+        <h2 class="relative z-10 text-2xl mb-6">Haram Earnings</h2>
+      </div>
+
+      <p class="drop-cap text-lg leading-relaxed text-ink-light mb-8">
+        Before calculating Zakat, you must identify and separate any
+        impermissible (haram) income from your total earnings. This income
+        must be purified — given away entirely — and is subtracted from
+        your Zakat-liable wealth. You do not pay Zakat on haram income;
+        instead, you must dispose of it.
+      </p>
+
+      <div class="card bg-red-50/20 border-red-200/30 mb-8">
+        <h4 class="font-display text-lg font-semibold mb-3 text-red-900/70">Impermissible Sectors</h4>
+        <p class="text-ink-light mb-3">
+          Income from the following sectors is considered impermissible and must be purified:
+        </p>
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+          {["Alcohol & tobacco", "Gambling & betting", "Adult entertainment", "Conventional interest (riba)", "Weapons manufacturing", "Prohibited food/beverage"].map(sector => (
+            <div class="bg-white/50 rounded-sm px-3 py-2 text-sm text-ink-light font-ui">
+              {sector}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Equity Haram Earnings -->
+      <div class="card mb-4">
+        <h4 class="font-display text-lg font-semibold mb-3">Equity Haram Earnings (3a)</h4>
+        <p class="text-ink-light leading-relaxed mb-3">
+          If you own stocks in companies that derive some income from
+          impermissible activities, you need to calculate your share of
+          that prohibited income:
+        </p>
+        <div class="bg-parchment-200 rounded-sm px-5 py-4 mb-3">
+          <p class="font-ui text-sm text-ink font-medium mb-2">Formula:</p>
+          <p class="font-display text-lg text-forest-700">
+            (Prohibited Income / Outstanding Shares) × Your Shares = Haram Equity Earnings
+          </p>
+        </div>
+        <p class="text-ink-lighter text-sm">
+          Example: If a company earns 0.04% of revenue from interest, and you own 100
+          shares out of 1,000,000, your haram portion is typically very small but
+          must still be purified.
+        </p>
+      </div>
+
+      <!-- Dividend Haram Earnings -->
+      <div class="card mb-4">
+        <h4 class="font-display text-lg font-semibold mb-3">Dividend Haram Earnings (3b)</h4>
+        <p class="text-ink-light leading-relaxed mb-3">
+          Dividends may include a haram portion proportional to the company's
+          prohibited income:
+        </p>
+        <div class="bg-parchment-200 rounded-sm px-5 py-4">
+          <p class="font-ui text-sm text-ink font-medium mb-2">Formula:</p>
+          <p class="font-display text-lg text-forest-700">
+            (Prohibited Income / Total Income) × Dividend Received = Haram Dividend Earnings
+          </p>
+        </div>
+        <p class="text-ink-lighter text-sm mt-3">
+          If dividends are paid quarterly or monthly, multiply accordingly for
+          each payment period.
+        </p>
+      </div>
+
+      <!-- Fixed Income / Bonds -->
+      <div class="card mb-4">
+        <h4 class="font-display text-lg font-semibold mb-3">Fixed Income Instruments — Bonds (3c)</h4>
+        <p class="text-ink-light leading-relaxed mb-4">
+          Bonds and interest-bearing instruments are treated differently based
+          on how they were acquired:
+        </p>
+        <div class="space-y-3">
+          <div class="bg-parchment-200/50 rounded-sm p-4 border-l-2 border-gold/30">
+            <p class="font-ui text-sm font-medium mb-1">Purchased knowingly (now regret):</p>
+            <p class="text-ink-light text-sm">Give away all earnings. Keep principal as an asset for Zakat.</p>
+          </div>
+          <div class="bg-parchment-200/50 rounded-sm p-4 border-l-2 border-forest-300/50">
+            <p class="font-ui text-sm font-medium mb-1">Received as a gift:</p>
+            <p class="text-ink-light text-sm">Keep both principal and earnings — you are not responsible for the original purchase.</p>
+          </div>
+          <div class="bg-parchment-200/50 rounded-sm p-4 border-l-2 border-parchment-400">
+            <p class="font-ui text-sm font-medium mb-1">Forced by employer/law:</p>
+            <p class="text-ink-light text-sm">Calculate principal separately as an asset. Give away the interest earnings.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pull-quote">
+        "There is no Zakat except on realized gains."
+      </div>
+    </section>
+
+    <div class="divider-gold"></div>
+
+    <!-- Chapter V: Expenses and Liabilities -->
+    <section>
+      <div class="relative">
+        <span class="section-number">V</span>
+        <h2 class="relative z-10 text-2xl mb-6">Expenses &amp; Liabilities</h2>
+      </div>
+
+      <p class="text-ink-light leading-relaxed mb-6">
+        Certain expenses and liabilities can be deducted from your total
+        assets before calculating Zakat. The key rule: <strong>only expenses
+        that are "immediately due"</strong> during your Zakat calculation
+        period are deductible. You cannot deduct future expenses or long-term
+        debt in full.
+      </p>
+
+      <div class="card-gold mb-8">
+        <p class="font-ui text-sm text-gold-700 font-semibold mb-1">Important Principle</p>
+        <p class="text-ink-light">
+          Only deduct what is <em>currently due</em> — one month's worth of
+          recurring expenses, the current period's insurance, and debts
+          with immediate payment obligations.
+        </p>
+      </div>
+
+      <!-- Monthly Living Expenses -->
+      <div class="card mb-4">
+        <h4 class="font-display text-lg font-semibold mb-3">Monthly Living Expenses (4a)</h4>
+        <p class="text-ink-light leading-relaxed mb-3">
+          Deduct one month of essential living costs:
+        </p>
+        <ul class="text-ink-light space-y-1.5">
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-forest-400 mt-2 shrink-0"></span>
+            Mortgage or rent payment (one month)
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-forest-400 mt-2 shrink-0"></span>
+            Medical expenses
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-forest-400 mt-2 shrink-0"></span>
+            Groceries and household supplies
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-forest-400 mt-2 shrink-0"></span>
+            Utilities and telecommunications
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-forest-400 mt-2 shrink-0"></span>
+            Transportation, fuel, and vehicle upkeep
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-forest-400 mt-2 shrink-0"></span>
+            Miscellaneous living expenses
+          </li>
+        </ul>
+      </div>
+
+      <!-- Insurance -->
+      <div class="card mb-4">
+        <h4 class="font-display text-lg font-semibold mb-3">Insurance Payments (4b)</h4>
+        <p class="text-ink-light leading-relaxed mb-3">
+          Deduct the <em>period-due</em> amount of your insurance premiums:
+        </p>
+        <ul class="text-ink-light space-y-1.5">
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-forest-400 mt-2 shrink-0"></span>
+            Home or renter's insurance
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-forest-400 mt-2 shrink-0"></span>
+            Auto insurance
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-forest-400 mt-2 shrink-0"></span>
+            Medical/health insurance
+          </li>
+        </ul>
+      </div>
+
+      <!-- Other Deductions -->
+      <div class="card mb-4">
+        <h4 class="font-display text-lg font-semibold mb-3">Other Deductions (4c–4f)</h4>
+        <ul class="text-ink-light space-y-1.5">
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-gold mt-2 shrink-0"></span>
+            <span><strong>4c:</strong> Property taxes (period-due amount)</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-gold mt-2 shrink-0"></span>
+            <span><strong>4d:</strong> Delinquent tax payments</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-gold mt-2 shrink-0"></span>
+            <span><strong>4e:</strong> Fines and penalties</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Debts -->
+      <div class="card border-l-4 border-l-gold">
+        <h4 class="font-display text-lg font-semibold mb-3">Debts Owed to Others (4g)</h4>
+        <p class="text-ink-light leading-relaxed">
+          This is an important deduction. Any debts you currently owe to other
+          people or institutions that are <em>immediately due</em> should be
+          deducted. The general principle: <strong>pay your debts before
+          paying Zakat</strong>. If a debt is long-term (like a mortgage),
+          only deduct the current month's payment, not the entire balance.
+        </p>
+      </div>
+    </section>
+
+    <div class="divider-gold"></div>
+
+    <!-- Summary -->
+    <section>
+      <h2 class="text-2xl mb-6">Summary: The Three Worksheets</h2>
+      <div class="space-y-4">
+        <div class="card bg-forest-50/30 border-forest-200/40">
+          <h4 class="font-display text-lg font-semibold text-forest-700 mb-2">
+            Worksheet 1: Total Earnings &amp; Income
+          </h4>
+          <p class="text-ink-light">
+            Sum of all your assets: cash, gold, silver, stocks, retirement,
+            crypto, real estate income, business inventory, receivables, and
+            all other qualifying wealth.
+          </p>
+        </div>
+
+        <div class="card bg-red-50/20 border-red-200/30">
+          <h4 class="font-display text-lg font-semibold text-red-900/60 mb-2">
+            Worksheet 2: Haram Earnings
+          </h4>
+          <p class="text-ink-light">
+            Total impermissible income to be subtracted — equity haram
+            earnings, dividend haram earnings, and bond interest.
+          </p>
+        </div>
+
+        <div class="card bg-parchment-200/50">
+          <h4 class="font-display text-lg font-semibold mb-2">
+            Worksheet 3: Expenses &amp; Liabilities
+          </h4>
+          <p class="text-ink-light">
+            Total deductible expenses — monthly living costs, insurance,
+            taxes, fines, and immediately-due debts.
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-8 text-center">
+        <p class="text-ink-light mb-4">
+          Ready to put these worksheets into practice?
+        </p>
+        <a href="/calculator" class="btn-gold inline-block">
+          Open the Calculator
+        </a>
+      </div>
+    </section>
+
+    <!-- Navigation -->
+    <div class="flex justify-between pt-8">
+      <a href="/guide/assets" class="group flex items-center gap-3 font-ui text-sm font-medium text-forest-600 hover:text-gold transition-colors">
+        <svg class="w-4 h-4 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+        <span>Previous: Assets &amp; Earnings</span>
+      </a>
+      <a href="/guide/giving" class="group flex items-center gap-3 font-ui text-sm font-medium text-forest-600 hover:text-gold transition-colors">
+        <span>Next: Who to Give To</span>
+        <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</GuideLayout>

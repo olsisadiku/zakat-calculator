@@ -1,0 +1,55 @@
+---
+import Layout from "./Layout.astro";
+import GuideNav from "../components/GuideNav.astro";
+
+interface Props {
+  title: string;
+  subtitle?: string;
+  chapter?: string;
+  description?: string;
+}
+
+const { title, subtitle, chapter, description } = Astro.props;
+const currentPath = Astro.url.pathname;
+---
+
+<Layout title={title} description={description}>
+  <!-- Page hero -->
+  <section class="bg-forest-800 relative overflow-hidden">
+    <div class="absolute inset-0 bg-geometric-dark"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-6 py-16 md:py-20">
+      {chapter && (
+        <span class="font-ui text-gold-300 text-sm font-semibold tracking-wider uppercase mb-3 block">
+          {chapter}
+        </span>
+      )}
+      <h1 class="text-parchment-100 text-display-md md:text-display-lg max-w-3xl">
+        {title}
+      </h1>
+      {subtitle && (
+        <p class="text-parchment-300 font-body text-lg mt-4 max-w-2xl">
+          {subtitle}
+        </p>
+      )}
+    </div>
+  </section>
+
+  <!-- Attribution -->
+  <div class="max-w-7xl mx-auto px-6 mt-8">
+    <div class="attribution-banner">
+      Content based on <em>Simple Zakat Guide: Understand and Calculate Your Zakat</em>
+      by <strong>Joe Bradford</strong> (3rd Edition, Origem Publishing, 2022).
+      Always consult a qualified scholar for specific rulings.
+    </div>
+  </div>
+
+  <!-- Content area with sidebar -->
+  <div class="max-w-7xl mx-auto px-6 py-12">
+    <div class="flex flex-col lg:flex-row gap-12">
+      <GuideNav currentPath={currentPath} />
+      <article class="flex-1 min-w-0 max-w-3xl">
+        <slot />
+      </article>
+    </div>
+  </div>
+</Layout>

@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply font-body text-ink bg-parchment-100;
+    font-size: 1.125rem;
+    line-height: 1.75;
+    font-weight: 450;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display text-ink;
+    line-height: 1.2;
+  }
+
+  h1 { @apply text-display-lg font-semibold; }
+  h2 { @apply text-display-md font-semibold; }
+  h3 { @apply text-display-sm font-medium; }
+  h4 { @apply text-2xl font-medium; }
+
+  ::selection {
+    background-color: #f5e6c8;
+    color: #13291d;
+  }
+}
+
+@layer components {
+  /* Gold decorative divider */
+  .divider-gold {
+    @apply relative w-full my-12;
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      transparent,
+      #d4c5a9 20%,
+      #b8860b 50%,
+      #d4c5a9 80%,
+      transparent
+    );
+  }
+
+  .divider-gold::after {
+    content: "◆";
+    @apply absolute left-1/2 -translate-x-1/2 -top-3 text-gold bg-parchment-100 px-3;
+    font-size: 0.75rem;
+  }
+
+  /* Content card */
+  .card {
+    @apply bg-parchment-50 rounded-sm border border-parchment-400/40 p-6 md:p-8;
+    box-shadow:
+      0 1px 3px rgba(19, 41, 29, 0.04),
+      0 6px 16px rgba(19, 41, 29, 0.03);
+  }
+
+  .card-gold {
+    @apply card border-l-4 border-l-gold;
+  }
+
+  /* Drop cap for chapter openings */
+  .drop-cap::first-letter {
+    @apply font-display text-gold float-left font-bold;
+    font-size: 4rem;
+    line-height: 0.8;
+    padding-right: 0.5rem;
+    padding-top: 0.25rem;
+  }
+
+  /* Pull quote */
+  .pull-quote {
+    @apply font-display text-display-sm text-forest-600 italic my-10 mx-auto max-w-2xl text-center relative;
+    padding: 2rem 0;
+  }
+
+  .pull-quote::before,
+  .pull-quote::after {
+    content: "";
+    @apply absolute left-1/2 -translate-x-1/2 h-px w-24;
+    background: linear-gradient(to right, transparent, #b8860b, transparent);
+  }
+
+  .pull-quote::before { @apply top-0; }
+  .pull-quote::after { @apply bottom-0; }
+
+  /* Guide navigation sidebar */
+  .guide-nav-link {
+    @apply block py-2 px-4 text-sm font-ui text-ink-light rounded-sm transition-all duration-200;
+  }
+
+  .guide-nav-link:hover {
+    @apply text-forest-500 bg-forest-50;
+  }
+
+  .guide-nav-link.active {
+    @apply text-forest-600 bg-forest-50 font-semibold border-l-2 border-gold;
+  }
+
+  /* Scroll-triggered animations */
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Ledger-style table for calculator */
+  .ledger-row {
+    @apply flex items-center justify-between py-3 px-4 border-b border-parchment-300/60;
+    transition: background-color 0.15s ease;
+  }
+
+  .ledger-row:hover {
+    @apply bg-parchment-200/50;
+  }
+
+  .ledger-row:nth-child(even) {
+    @apply bg-parchment-200/30;
+  }
+
+  .ledger-input {
+    @apply font-ui text-right bg-transparent border-b-2 border-parchment-400
+           focus:border-gold focus:outline-none px-2 py-1 w-36 text-lg;
+    transition: border-color 0.2s ease;
+  }
+
+  .ledger-total {
+    @apply flex items-center justify-between py-4 px-4 font-display text-xl font-semibold
+           bg-forest-800 text-parchment-100 rounded-sm mt-2;
+  }
+
+  /* Button styles */
+  .btn-primary {
+    @apply font-ui font-semibold px-8 py-3 bg-forest-800 text-parchment-100 rounded-sm
+           transition-all duration-300 hover:bg-forest-700 hover:shadow-lg;
+  }
+
+  .btn-gold {
+    @apply font-ui font-semibold px-8 py-3 bg-gold text-white rounded-sm
+           transition-all duration-300 hover:bg-gold-600 hover:shadow-lg;
+  }
+
+  .btn-outline {
+    @apply font-ui font-semibold px-8 py-3 border-2 border-forest-800 text-forest-800 rounded-sm
+           transition-all duration-300 hover:bg-forest-800 hover:text-parchment-100;
+  }
+
+  /* Noise texture overlay */
+  .noise-overlay::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* Tooltip for Islamic terms */
+  .term-tooltip {
+    @apply relative cursor-help border-b border-dashed border-gold;
+  }
+
+  .term-tooltip::after {
+    content: attr(data-tooltip);
+    @apply absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2
+           bg-forest-800 text-parchment-100 text-sm font-ui rounded-sm
+           opacity-0 pointer-events-none transition-opacity duration-200
+           whitespace-nowrap;
+    z-index: 50;
+  }
+
+  .term-tooltip:hover::after {
+    @apply opacity-100;
+  }
+
+  /* Section numbering for guide pages */
+  .section-number {
+    @apply font-display text-8xl font-bold text-gold/10 absolute -left-4 -top-8 select-none;
+    z-index: 0;
+  }
+
+  /* Attribution banner */
+  .attribution-banner {
+    @apply bg-parchment-200 border border-parchment-400/50 rounded-sm px-6 py-4
+           font-ui text-sm text-ink;
+  }
+
+  .attribution-banner a {
+    @apply text-forest-500 underline decoration-gold/40 underline-offset-2
+           hover:text-forest-700 hover:decoration-gold transition-colors;
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0ebe0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d4c5a9;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b8860b;
+}
+
+/* Print styles for calculator */
+@media print {
+  .no-print { display: none !important; }
+  .ledger-total { color: #13291d !important; background: #e9f5ee !important; }
+  body { background: white !important; }
+}

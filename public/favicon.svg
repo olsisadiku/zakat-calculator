@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2d6a4f"/>
+      <stop offset="100%" stop-color="#13291d"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="12" fill="url(#g)"/>
+  <!-- 8-pointed star -->
+  <g transform="translate(32,32)" fill="none" stroke="#d4a843" stroke-width="1.5">
+    <rect x="-14" y="-14" width="28" height="28" rx="1"/>
+    <rect x="-14" y="-14" width="28" height="28" rx="1" transform="rotate(45)"/>
+    <circle r="8" stroke-width="1"/>
+  </g>
+  <text x="32" y="38" text-anchor="middle" font-family="Georgia,serif" font-size="16" font-weight="bold" fill="#d4a843">Z</text>
+</svg>

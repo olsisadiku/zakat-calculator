@@ -1,0 +1,445 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Understand & Calculate Your Zakat">
+  <!-- Hero Section -->
+  <section class="relative min-h-[85vh] flex items-center bg-forest-800 overflow-hidden">
+    <!-- Geometric pattern background -->
+    <div class="absolute inset-0 bg-geometric-dark"></div>
+
+    <!-- Gradient overlay for depth -->
+    <div
+      class="absolute inset-0"
+      style="background: radial-gradient(ellipse at 30% 50%, rgba(45,106,79,0.3) 0%, transparent 60%);"
+    >
+    </div>
+
+    <!-- Decorative gold line -->
+    <div
+      class="absolute left-0 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-gold/30 to-transparent ml-[10%] hidden lg:block"
+    >
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6 py-20 w-full">
+      <div class="max-w-3xl">
+        <!-- Overline -->
+        <div
+          class="flex items-center gap-3 mb-8 opacity-0 animate-fade-up"
+          style="animation-delay: 0.1s; animation-fill-mode: forwards;"
+        >
+          <div class="h-px w-12 bg-gold-300"></div>
+          <span
+            class="font-ui text-gold-300 text-sm font-semibold tracking-widest uppercase"
+          >
+            A Comprehensive Resource
+          </span>
+        </div>
+
+        <!-- Title -->
+        <h1
+          class="font-display text-display-lg md:text-display-xl text-parchment-100 mb-6 opacity-0 animate-fade-up"
+          style="animation-delay: 0.3s; animation-fill-mode: forwards;"
+        >
+          Understand &<br />
+          <span class="text-gold-300">Calculate</span> Your Zakat
+        </h1>
+
+        <!-- Subtitle -->
+        <p
+          class="text-parchment-300 text-lg md:text-xl leading-relaxed max-w-xl mb-10 opacity-0 animate-fade-up"
+          style="animation-delay: 0.5s; animation-fill-mode: forwards;"
+        >
+          A clear, practical guide to one of Islam's five pillars. Learn
+          what Zakat is, understand your obligations across every asset type,
+          and calculate exactly what you owe.
+        </p>
+
+        <!-- CTAs -->
+        <div
+          class="flex flex-wrap gap-4 opacity-0 animate-fade-up"
+          style="animation-delay: 0.7s; animation-fill-mode: forwards;"
+        >
+          <a
+            href="/guide"
+            class="font-ui font-semibold px-8 py-4 bg-gold text-white rounded-sm transition-all duration-300 hover:bg-gold-600 hover:shadow-lg hover:shadow-gold/20"
+          >
+            Read the Guide
+          </a>
+          <a
+            href="/calculator"
+            class="font-ui font-semibold px-8 py-4 border-2 border-parchment-300/40 text-parchment-100 rounded-sm transition-all duration-300 hover:bg-parchment-100/10 hover:border-parchment-300/60"
+          >
+            Open Calculator
+          </a>
+        </div>
+      </div>
+
+      <!-- Decorative geometric element -->
+      <div
+        class="hidden lg:block absolute right-12 top-1/2 -translate-y-1/2 opacity-[0.06]"
+      >
+        <svg
+          width="400"
+          height="400"
+          viewBox="0 0 400 400"
+          fill="none"
+          stroke="#d4a843"
+          stroke-width="1"
+        >
+          <rect
+            x="80"
+            y="80"
+            width="240"
+            height="240"
+            transform="rotate(0 200 200)"></rect>
+          <rect
+            x="80"
+            y="80"
+            width="240"
+            height="240"
+            transform="rotate(45 200 200)"></rect>
+          <rect
+            x="120"
+            y="120"
+            width="160"
+            height="160"
+            transform="rotate(0 200 200)"></rect>
+          <rect
+            x="120"
+            y="120"
+            width="160"
+            height="160"
+            transform="rotate(45 200 200)"></rect>
+          <circle cx="200" cy="200" r="100"></circle>
+          <circle cx="200" cy="200" r="60"></circle>
+          <line x1="200" y1="0" x2="200" y2="400"></line>
+          <line x1="0" y1="200" x2="400" y2="200"></line>
+          <line x1="0" y1="0" x2="400" y2="400"></line>
+          <line x1="400" y1="0" x2="0" y2="400"></line>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- Book Attribution Banner -->
+  <section class="bg-parchment-200 border-b border-parchment-300">
+    <div
+      class="max-w-7xl mx-auto px-6 py-5 flex flex-col sm:flex-row items-center gap-3 text-center sm:text-left"
+    >
+      <svg
+        class="w-5 h-5 text-gold shrink-0"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+      >
+        <path
+          d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z"
+        ></path>
+      </svg>
+      <p class="font-ui text-sm text-ink-light">
+        This website is based on
+        <strong class="text-ink"
+          ><em>Simple Zakat Guide: Understand and Calculate Your Zakat</em></strong
+        >
+        by <strong class="text-ink">Joe Bradford</strong> (3rd Edition, 2022, Origem
+        Publishing). Content adapted for web with permission.
+      </p>
+    </div>
+  </section>
+
+  <!-- What is Zakat -->
+  <section class="max-w-7xl mx-auto px-6 py-20">
+    <div class="max-w-3xl mx-auto text-center mb-16 reveal">
+      <span
+        class="font-ui text-gold text-sm font-semibold tracking-widest uppercase mb-4 block"
+      >
+        The Third Pillar
+      </span>
+      <h2 class="text-forest-800 mb-6">What is Zakat?</h2>
+      <p class="text-ink-light text-lg leading-relaxed">
+        Zakat comes from the Arabic root meaning both <em>growth</em> and
+        <em>purity</em>. It is the obligatory charitable contribution every
+        Muslim must pay on their surplus wealth, purifying what remains and
+        nurturing growth in the community. It is a flat-rate obligation of
+        <strong>2.5%</strong> on qualifying wealth held for one lunar year above
+        a minimum threshold known as the <em>Nisab</em>.
+      </p>
+    </div>
+
+    <!-- Feature cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="card-gold reveal" style="animation-delay: 0.1s;">
+        <div class="font-display text-5xl text-gold/20 font-bold mb-4">01</div>
+        <h3 class="text-xl mb-3">Purification</h3>
+        <p class="text-ink-light leading-relaxed">
+          Zakat purifies your wealth. It is not a tax or a penalty&mdash;it is a
+          spiritual obligation that cleanses what you own and ensures you are not
+          hoarding beyond your needs.
+        </p>
+      </div>
+
+      <div class="card-gold reveal" style="animation-delay: 0.2s;">
+        <div class="font-display text-5xl text-gold/20 font-bold mb-4">02</div>
+        <h3 class="text-xl mb-3">Growth</h3>
+        <p class="text-ink-light leading-relaxed">
+          The word itself implies growth. By giving Zakat, you invest in
+          your community, aid the less fortunate, and cultivate
+          <em>barakah</em> (divine blessing) in your remaining wealth.
+        </p>
+      </div>
+
+      <div class="card-gold reveal" style="animation-delay: 0.3s;">
+        <div class="font-display text-5xl text-gold/20 font-bold mb-4">03</div>
+        <h3 class="text-xl mb-3">Obligation</h3>
+        <p class="text-ink-light leading-relaxed">
+          Zakat is not optional charity (<em>sadaqa</em>). It is a pillar of
+          Islam&mdash;an obligation upon every Muslim whose net wealth exceeds
+          the Nisab threshold for a full lunar year.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider-gold max-w-4xl mx-auto"></div>
+
+  <!-- Guide Overview -->
+  <section class="max-w-7xl mx-auto px-6 py-16">
+    <div class="text-center mb-14 reveal">
+      <h2 class="text-forest-800 mb-4">Explore the Guide</h2>
+      <p class="text-ink-light max-w-2xl mx-auto">
+        From foundational principles to detailed asset breakdowns and modern
+        considerations like cryptocurrency and NFTs.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+      <!-- Part 1 -->
+      <a href="/guide/principles" class="group card reveal hover:border-gold/50 transition-all duration-300">
+        <div class="flex items-start gap-4">
+          <div
+            class="w-14 h-14 rounded-sm bg-forest-50 flex items-center justify-center shrink-0 group-hover:bg-gold-50 transition-colors"
+          >
+            <span class="font-display text-2xl text-forest-600 group-hover:text-gold font-bold transition-colors">I</span>
+          </div>
+          <div>
+            <h3 class="text-lg mb-1 group-hover:text-gold transition-colors">
+              Principles &amp; Terms
+            </h3>
+            <p class="text-ink-light">
+              Islamic financial ethics, wealth stewardship, and essential
+              concepts like Nisab, Hawl, and the five core principles of Zakat.
+            </p>
+          </div>
+        </div>
+      </a>
+
+      <!-- Part 2a -->
+      <a href="/guide/assets" class="group card reveal hover:border-gold/50 transition-all duration-300">
+        <div class="flex items-start gap-4">
+          <div
+            class="w-14 h-14 rounded-sm bg-forest-50 flex items-center justify-center shrink-0 group-hover:bg-gold-50 transition-colors"
+          >
+            <span class="font-display text-2xl text-forest-600 group-hover:text-gold font-bold transition-colors">II</span>
+          </div>
+          <div>
+            <h3 class="text-lg mb-1 group-hover:text-gold transition-colors">
+              Assets &amp; Earnings
+            </h3>
+            <p class="text-ink-light">
+              Cash, gold, silver, stocks, retirement accounts, real estate,
+              cryptocurrency, NFTs, business inventory, and more.
+            </p>
+          </div>
+        </div>
+      </a>
+
+      <!-- Part 2b -->
+      <a href="/guide/earnings-expenses" class="group card reveal hover:border-gold/50 transition-all duration-300">
+        <div class="flex items-start gap-4">
+          <div
+            class="w-14 h-14 rounded-sm bg-forest-50 flex items-center justify-center shrink-0 group-hover:bg-gold-50 transition-colors"
+          >
+            <span class="font-display text-2xl text-forest-600 group-hover:text-gold font-bold transition-colors">III</span>
+          </div>
+          <div>
+            <h3 class="text-lg mb-1 group-hover:text-gold transition-colors">
+              Earnings &amp; Expenses
+            </h3>
+            <p class="text-ink-light">
+              Identifying impermissible (haram) earnings, deductible expenses,
+              liabilities, and how they affect your Zakat calculation.
+            </p>
+          </div>
+        </div>
+      </a>
+
+      <!-- Part 3 -->
+      <a href="/guide/giving" class="group card reveal hover:border-gold/50 transition-all duration-300">
+        <div class="flex items-start gap-4">
+          <div
+            class="w-14 h-14 rounded-sm bg-forest-50 flex items-center justify-center shrink-0 group-hover:bg-gold-50 transition-colors"
+          >
+            <span class="font-display text-2xl text-forest-600 group-hover:text-gold font-bold transition-colors">IV</span>
+          </div>
+          <div>
+            <h3 class="text-lg mb-1 group-hover:text-gold transition-colors">
+              Who to Give To
+            </h3>
+            <p class="text-ink-light">
+              The eight Quranic categories of Zakat recipients, who is
+              ineligible, distribution guidelines, and best practices.
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <div class="divider-gold max-w-4xl mx-auto"></div>
+
+  <!-- Calculator CTA -->
+  <section class="max-w-7xl mx-auto px-6 py-20">
+    <div class="relative bg-forest-800 rounded-sm overflow-hidden">
+      <div class="absolute inset-0 bg-geometric-dark"></div>
+      <div
+        class="relative z-10 p-10 md:p-16 flex flex-col md:flex-row items-center gap-10"
+      >
+        <div class="flex-1">
+          <span
+            class="font-ui text-gold-300 text-sm font-semibold tracking-widest uppercase mb-3 block"
+          >
+            Interactive Tool
+          </span>
+          <h2 class="text-parchment-100 text-display-md mb-4">
+            Calculate Your Zakat
+          </h2>
+          <p class="text-parchment-300 leading-relaxed max-w-lg mb-4">
+            Use our step-by-step calculator to work through all four
+            worksheets&mdash;from listing your assets, identifying
+            impermissible earnings, deducting expenses, to computing your final
+            Zakat obligation.
+          </p>
+          <p class="text-parchment-400 font-ui text-sm flex items-center gap-2">
+            <svg class="w-4 h-4 text-gold-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+            </svg>
+            100% private &mdash; runs entirely in your browser. No data is ever
+            sent to any server. We cannot see your numbers.
+          </p>
+        </div>
+        <div class="shrink-0">
+          <a
+            href="/calculator"
+            class="font-ui font-semibold px-10 py-4 bg-gold text-white rounded-sm transition-all duration-300 hover:bg-gold-600 hover:shadow-lg hover:shadow-gold/20 text-lg"
+          >
+            Open Calculator
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Five Core Concepts -->
+  <section class="bg-parchment-200/50 py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-14 reveal">
+        <h2 class="text-forest-800 mb-4">Five Core Concepts</h2>
+        <p class="text-ink-light max-w-2xl mx-auto">
+          Before diving into the details, internalize these five foundational
+          ideas that govern how Zakat works.
+        </p>
+      </div>
+
+      <div class="max-w-3xl mx-auto flex flex-col gap-6">
+        <div class="card reveal flex items-start gap-5">
+          <div
+            class="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center shrink-0 mt-1"
+          >
+            <span class="font-display text-gold font-bold">1</span>
+          </div>
+          <div>
+            <h4 class="font-display text-lg font-semibold mb-1">
+              Flat-Rate, Not Progressive
+            </h4>
+            <p class="text-ink-light">
+              Zakat is 2.5% across the board. Unlike income tax, it does not
+              increase with the amount of wealth. Everyone pays the same
+              percentage.
+            </p>
+          </div>
+        </div>
+
+        <div class="card reveal flex items-start gap-5">
+          <div
+            class="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center shrink-0 mt-1"
+          >
+            <span class="font-display text-gold font-bold">2</span>
+          </div>
+          <div>
+            <h4 class="font-display text-lg font-semibold mb-1">
+              Zakat Purifies
+            </h4>
+            <p class="text-ink-light">
+              It is a spiritual cleansing of your wealth. Paying Zakat removes
+              any impurity from what you earned and keeps your heart detached
+              from material excess.
+            </p>
+          </div>
+        </div>
+
+        <div class="card reveal flex items-start gap-5">
+          <div
+            class="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center shrink-0 mt-1"
+          >
+            <span class="font-display text-gold font-bold">3</span>
+          </div>
+          <div>
+            <h4 class="font-display text-lg font-semibold mb-1">
+              Only on Owned &amp; Controlled Wealth
+            </h4>
+            <p class="text-ink-light">
+              You only pay Zakat on assets you truly own and have full control
+              over. Locked, inaccessible, or disputed assets may be exempt.
+            </p>
+          </div>
+        </div>
+
+        <div class="card reveal flex items-start gap-5">
+          <div
+            class="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center shrink-0 mt-1"
+          >
+            <span class="font-display text-gold font-bold">4</span>
+          </div>
+          <div>
+            <h4 class="font-display text-lg font-semibold mb-1">
+              Only on Liquid, Beneficial Wealth
+            </h4>
+            <p class="text-ink-light">
+              Zakat applies to wealth you can actually benefit from&mdash;liquid
+              assets, tradeable goods, and accessible funds. Personal-use items
+              like your home are exempt.
+            </p>
+          </div>
+        </div>
+
+        <div class="card reveal flex items-start gap-5">
+          <div
+            class="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center shrink-0 mt-1"
+          >
+            <span class="font-display text-gold font-bold">5</span>
+          </div>
+          <div>
+            <h4 class="font-display text-lg font-semibold mb-1">
+              Only on Surplus Held One Year
+            </h4>
+            <p class="text-ink-light">
+              Your wealth must exceed the Nisab (minimum threshold) and be held
+              for a full lunar year (354 days) before Zakat becomes due. This
+              period is called the <em>Hawl</em>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,51 @@
+---
+interface Props {
+  currentPath: string;
+}
+
+const { currentPath } = Astro.props;
+
+const sections = [
+  { href: "/guide", label: "Overview", icon: "📖" },
+  { href: "/guide/principles", label: "Principles & Terms", icon: "I" },
+  { href: "/guide/assets", label: "Assets & Earnings", icon: "II" },
+  { href: "/guide/earnings-expenses", label: "Earnings & Expenses", icon: "III" },
+  { href: "/guide/giving", label: "Who to Give To", icon: "IV" },
+];
+---
+
+<aside class="w-full lg:w-64 shrink-0">
+  <nav
+    class="lg:sticky lg:top-24 bg-parchment-50 border border-parchment-400/30 rounded-sm p-4"
+  >
+    <h3 class="font-display text-lg font-semibold text-forest-800 mb-4 px-2">
+      Guide Chapters
+    </h3>
+    <div class="flex flex-col gap-0.5">
+      {
+        sections.map((section) => (
+          <a
+            href={section.href}
+            class:list={[
+              "guide-nav-link flex items-center gap-3",
+              currentPath === section.href && "active",
+            ]}
+          >
+            <span class="w-6 text-center font-display text-xs text-gold-600 font-bold">
+              {section.icon}
+            </span>
+            <span>{section.label}</span>
+          </a>
+        ))
+      }
+    </div>
+    <div class="mt-6 pt-4 border-t border-parchment-300/50 px-2">
+      <a
+        href="/calculator"
+        class="btn-gold text-center block text-sm !py-2 !px-4"
+      >
+        Open Calculator
+      </a>
+    </div>
+  </nav>
+</aside>
