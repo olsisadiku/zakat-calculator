@@ -102,7 +102,7 @@ const navLinks = [
   <!-- Mobile Nav -->
   <div
     id="mobile-menu"
-    class="hidden md:hidden border-t border-parchment-300/50 bg-parchment-100/98 backdrop-blur-sm"
+    class="hidden md:hidden border-t border-parchment-300/50 bg-parchment-100 shadow-lg"
   >
     <nav class="px-6 py-4 flex flex-col gap-1">
       {
@@ -158,5 +158,11 @@ const navLinks = [
 
   menuBtn?.addEventListener("click", () => {
     mobileMenu?.classList.toggle("hidden");
+    const isOpen = !mobileMenu?.classList.contains("hidden");
+    if (isOpen) {
+      header?.classList.add("bg-parchment-100", "shadow-lg");
+    } else if (window.scrollY <= 20) {
+      header?.classList.remove("bg-parchment-100", "shadow-lg", "bg-parchment-100/95", "backdrop-blur-md", "shadow-sm");
+    }
   });
 </script>
