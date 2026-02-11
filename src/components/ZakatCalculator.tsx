@@ -171,8 +171,8 @@ function InfoTooltip({ text }: { text: string }) {
   return (
     <span
       className="relative inline-flex items-center ml-1"
-      onMouseEnter={() => setShow(true)}
-      onMouseLeave={() => setShow(false)}
+      onPointerEnter={(e) => { if (e.pointerType === "mouse") setShow(true); }}
+      onPointerLeave={(e) => { if (e.pointerType === "mouse") setShow(false); }}
     >
       <button
         type="button"
