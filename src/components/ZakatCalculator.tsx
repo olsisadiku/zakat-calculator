@@ -753,7 +753,7 @@ export default function ZakatCalculator() {
                 </svg>
                 <span className="text-gold-700">
                   Could not fetch live price. Enter it manually — check{" "}
-                  <a href="https://www.silverpriceoz.com" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">silverpriceoz.com</a>
+                  <a href="https://www.goldpriceoz.com/silver/silver-price-per-gram/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">goldpriceoz.com</a>
                 </span>
               </div>
             )}
