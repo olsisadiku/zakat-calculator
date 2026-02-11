@@ -184,10 +184,10 @@ function InfoTooltip({ text }: { text: string }) {
       </button>
       {show && (
         <>
-          <div className="fixed inset-0 z-40 sm:hidden" onClick={() => setShow(false)} />
+          <div className="fixed inset-0 z-[9998] sm:hidden" onClick={() => setShow(false)} />
           <span
             role="tooltip"
-            className="fixed sm:absolute left-4 right-4 bottom-4 sm:left-1/2 sm:right-auto sm:bottom-full sm:-translate-x-1/2 sm:mb-2 sm:w-72 p-4 bg-gray-900 text-white text-[13px] rounded-lg shadow-xl z-50 leading-relaxed"
+            className="fixed sm:absolute left-4 right-4 bottom-4 sm:left-1/2 sm:right-auto sm:bottom-full sm:-translate-x-1/2 sm:mb-2 sm:w-72 p-4 bg-gray-900 text-white text-[13px] rounded-lg shadow-xl z-[9999] leading-relaxed"
             style={{ fontFamily: FONT_UI }}
           >
             {text}
@@ -318,7 +318,7 @@ function FieldSection({
       >
         {title}
       </h3>
-      <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
+      <div className="bg-white rounded-lg border border-gray-200">
         {fields.map((field) => (
           <LedgerField
             key={field.id}
@@ -605,7 +605,7 @@ export default function ZakatCalculator() {
             </p>
           </div>
 
-          <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
+          <div className="bg-white rounded-lg border border-gray-200">
             {haramFields.map((field) => (
               <LedgerField
                 key={field.id}
@@ -891,7 +891,7 @@ export default function ZakatCalculator() {
           </div>
 
           {/* ── Step 3: Calculation Summary ── */}
-          <div className="bg-white rounded-lg border border-gray-200 overflow-hidden mb-6">
+          <div className="bg-white rounded-lg border border-gray-200 mb-6">
             <div className="px-4 sm:px-6 py-3 sm:py-4 border-b border-gray-100">
               <h3 className="text-base sm:text-lg font-bold text-gray-900" style={{ fontFamily: FONT_UI }}>
                 Step 3: Your Zakat Breakdown

@@ -35,6 +35,15 @@
 }
 
 @layer components {
+  /* Guide content heading separators */
+  article h2 {
+    padding-bottom: 0.75rem;
+    background-image: linear-gradient(to right, #b8860b, #d4c5a9 50%, transparent);
+    background-position: bottom left;
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+  }
+
   /* Gold decorative divider */
   .divider-gold {
     @apply relative w-full my-12;
