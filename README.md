@@ -37,7 +37,7 @@ npm run preview   # Preview production build
 
 Content is adapted from and inspired by:
 
-> **Simple Zakat Guide: Understand and Calculate Your Zakat**
+> **[Simple Zakat Guide: Understand and Calculate Your Zakat](https://www.amazon.com/Simple-Zakat-Guide-Understand-Calculate/dp/0996519246)**
 > by Joe Bradford (3rd Edition, 2022)
 > Published by Origem Publishing
 > ISBN-13: 978-0-9965192-4-3
